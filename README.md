@@ -6,7 +6,7 @@ Libreria base para sistema de gestion para local cooperativo humano.
 
 ### Humano
 
-```json
+```
 {
   key: '0001', // String de numeros entre 0001 y 9999
   value: {
@@ -24,7 +24,7 @@ Libreria base para sistema de gestion para local cooperativo humano.
 
 ### Producto
 
-```json
+```
 {
   key: '0001-0001', // Id compuesto de los id de humano y producto
   value: {
