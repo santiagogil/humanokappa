@@ -1,8 +1,16 @@
+// Core
 var kappa = require('kappa-core')
+// Vistas
 var config = require('./views/config')
 var humanos = require('./views/humanos')
 var movimientos = require('./views/movimientos')
 var productos = require('./views/productos')
+// Schemas para validacion de mensajes
+var configSchema = require('./schemas/config')
+var humanosSchema = require('./schemas/humanos')
+var movimientosSchema = require('./schemas/movimientos')
+var productosSchema = require('./schemas/productos')
+
 
 // TODO reemplazar constantes por mensajes de configuracion + vista de configuracion actual
 const MARGENHUMANO = 20
@@ -24,3 +32,22 @@ core.feed('default', function (err, feed) {
     core.api.humanos.stream({ge: '0001', lt: '9999'}).on('data', console.log)
   })
 })
+
+function validate (msg) {
+  switch (msg) {
+    case 'config':
+      return configSchema(msg)
+      break
+    case 'humanos':
+      return humanosSchema(msg)
+      break
+    case 'movimientos':
+      return movimientosSchema(msg)
+      break
+    case 'productos':
+      return productosSchema(msg)
+      break
+    default:
+      return {isValid: false, reason: 'Tipo de mensaje inexistente'}
+  }
+}
