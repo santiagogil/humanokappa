@@ -15,6 +15,7 @@ Libreria base para sistema de gestion para local cooperativo humano.
     lastname: 'De Tal', // String representando solo el/los apellido/s
     brand: 'Los mates de Fulano', // String representando la marca de sus productos
     sector: 'Utilitarios', // String representando el rubro al que se dedica
+    comission: 'Marketing', // String detallando a que comision pertenece
     phone: '99999999', // String representando el numero de telefono tal cual se muestra en whatsapp
     email: 'fulano@talserver.com', // String representando el email
     web: 'https://losmatesdefulano.com', // String representando el sitio web de la marca
