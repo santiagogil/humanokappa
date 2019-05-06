@@ -8,6 +8,7 @@ Libreria base para sistema de gestion para local cooperativo humano.
 
 ```
 {
+  type: 'humano', // String indicando el tipo de mensaje
   key: '0001', // String de numeros entre 0001 y 9999
   value: {
     name: 'Fulano', // String representando solo el/los nombre/s de pila
@@ -26,6 +27,7 @@ Libreria base para sistema de gestion para local cooperativo humano.
 
 ```
 {
+  type: 'producto', // String indicando el tipo de mensaje
   key: '0001-0001', // Id compuesto de los id de humano y producto
   value: {
     desc: 'Mate tallado, etc.', // String detallando la descripcion del producto (TODO: cuantos caracteres?)
