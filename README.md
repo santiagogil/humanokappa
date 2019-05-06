@@ -43,3 +43,33 @@ Libreria base para sistema de gestion para local cooperativo humano.
 ### Movimiento 
 
 ### Configuracion
+
+## API
+
+Todas las operaciones de escritura se realizan mediante la escritura de mensajes en el feed.
+Las operaciones de lectura poseen metodos por vista.
+
+### humano.config.get()
+
+Devuelve la configuracion actual del sistema
+
+### humano.humanos.getAll([cb])
+
+Devuelve un array conteniendo los datos de todos los humanos si se provee un callback o un `readableStream` si no.
+
+``` js
+
+// Pasando console.log como parametro
+
+humano.humanos.getAll(console.log) // devuelve [objeto humano 0001, objeto humano 0002, etc.]
+
+// Sin callback
+
+humano.humanos.getAll()
+  .on('data', console.log) // devuelve los humanos uno a uno de manera individual
+
+```
+
+### humano.humanos.get(id)
+
+Devuelve los datos de un humano en particular

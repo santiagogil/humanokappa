@@ -18,7 +18,8 @@ const MARGENCONSIGNA = 30
 const TAZADEBITO = 0
 const TAZACREDITO = 0
 const PLAZOACREDITACION = 0
-
+// TODO exponer metodos de las vistas de manera mas directa
+// xej: humano.config.get en lugar de humano.api.config.get
 var core = kappa('./log', { valueEncoding: 'json' })
 
 core.use('humanos', humanos)

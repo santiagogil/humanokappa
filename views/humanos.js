@@ -14,7 +14,7 @@ var humanos = View(lvl, {
     get: function (core, key, cb) {
       lvl.get(key, cb)
     },
-    stream: function (core, opts) {
+    stream: function (core, opts) { // TODO convertir en getAll como describe el README
       return lvl.createReadStream(opts)
     }
   }
