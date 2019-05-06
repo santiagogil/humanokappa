@@ -2,6 +2,7 @@ var kappa = require('kappa-core')
 var View = require('kappa-view-level')
 var memdb = require('memdb')
 
+// TODO reemplazar constantes por mensajes de configuracion + vista de configuracion actual
 const MARGENHUMANO = 20
 const MARGENCONSIGNA = 30
 const TAZADEBITO = 0
@@ -13,6 +14,7 @@ var lvl = memdb()
 
 var humanos = View(lvl, {
   map: function (msg) {
+    console.log(msg)
     return [
       [ msg.value.key, msg.value.value ]  // map first element to second element
     ]
