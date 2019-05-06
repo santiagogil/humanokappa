@@ -1,5 +1,8 @@
 var kappa = require('kappa-core')
+var config = require('./views/config')
 var humanos = require('./views/humanos')
+var movimientos = require('./views/movimientos')
+var productos = require('./views/productos')
 
 // TODO reemplazar constantes por mensajes de configuracion + vista de configuracion actual
 const MARGENHUMANO = 20
